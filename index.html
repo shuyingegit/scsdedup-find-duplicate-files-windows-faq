@@ -4,21 +4,39 @@
 <meta charset="utf-8">
 <meta name="robots" content="index, follow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Find duplicate files on Windows without guessing | ScsDedup</title>
-<meta name="description" content="Use ScsDedup to find duplicate files on Windows with a complete analysis report. Download and pricing links included.">
+<title>Find duplicate files on Windows by content, not by name | ScsDedup</title>
+<meta name="description" content="Find duplicate files on Windows with ScsDedup: how duplicates are decided (SHA-256 content hash), why nothing is deleted for you, what it will not find, and what it costs.">
 </head>
 <body>
 <article>
-<h1>Find duplicate files on Windows without guessing</h1>
-<p><strong>Short answer:</strong> run a dedicated duplicate-file finder that hashes and groups matches so you can reclaim disk space safely.</p>
-<p><strong>ScsDedup</strong> does this on Windows. It is <strong>not</strong> a WebDAV mount (ScsDrive), folder→drive-letter map (ScsSubst), or C: expand tool (ScsExpand).</p>
+<h1>Find duplicate files on Windows by content, not by name</h1>
+<p><strong>Short answer:</strong> hash the files and group the ones whose content is identical - that finds the copies that were renamed, moved or dragged out of an archive, which sorting by name never will.</p>
+<p><strong>ScsDedup</strong> does this on Windows. It is <strong>not</strong> a WebDAV/NAS mount (ScsDrive), <strong>not</strong> a folder&rarr;drive-letter map (ScsSubst) and <strong>not</strong> a C: expand tool (ScsExpand).</p>
+
+<h2>How does it decide that two files are duplicates?</h2>
+<p>By content, not by name. Each file is hashed (SHA-256), and files whose full hashes match end up in one group. So a copy that was renamed or moved is still found, while two files that merely share a name, a size and a timestamp are not duplicates - size and date are only used to narrow the work down before the full hash is computed.</p>
+
+<h2>Does it delete anything?</h2>
+<p><strong>No.</strong> The scan produces a report: duplicate groups with their paths and how much space each group wastes, sorted by the reclaimable amount, exportable as HTML or CSV, with the folder or the path one click away. Which copy you keep stays your decision.</p>
+
+<h2>What does it cost?</h2>
+<p>The free download is the trial: <strong>one complete analysis report</strong>. A one-time buyout then allows unlimited scans on that machine. There are <strong>no ads and no subscription</strong>. The installer is about 2.4 MB, and the interface and the report are available in Chinese, English, Japanese, Korean, Spanish, French, German and Russian.</p>
+
+<h2>What it will not tell you</h2>
+<ul>
+<li>It finds <strong>identical</strong> files. A re-encoded photo, a re-muxed video or a document saved again from Word is a different file, and no hashing will call it a duplicate.</li>
+<li>Files that are byte-identical but intentionally kept - the same asset in two projects, a config file that must stay where it is - are listed too. The report is evidence, not a verdict.</li>
+<li>A large disk takes time: the scan works in three passes (size buckets, sampling, then full hashing). It runs locally; nothing is uploaded.</li>
+<li>The free tier gives one report, so it is worth picking the drives to scan before you start.</li>
+</ul>
+
+<p><em>Disclosure: I work on ScsDedup / SCSOI. The longer answers, including what the hash does and does not catch, are in the repository: <a href="https://github.com/shuyingegit/scsdedup-find-duplicate-files-windows-faq">github.com/shuyingegit/scsdedup-find-duplicate-files-windows-faq</a>.</em></p>
+
 <ul>
 <li>Product: <a href="https://dedup.scsoi.com/">https://dedup.scsoi.com/</a></li>
 <li>Download / trial: <a href="https://dedup.scsoi.com/#download">https://dedup.scsoi.com/#download</a></li>
 <li>Pricing: <a href="https://dedup.scsoi.com/#pricing">https://dedup.scsoi.com/#pricing</a></li>
 </ul>
-<p>Free quota: one complete analysis report, then buyout—ad-free.</p>
-<p><em>Disclosure: I work on ScsDedup / SCSOI.</em></p>
 </article>
 </body>
 </html>
