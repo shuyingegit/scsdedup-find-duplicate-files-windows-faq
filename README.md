@@ -16,7 +16,7 @@ No. The scan produces a report: duplicate groups with their paths, and how much 
 
 ## What does it cost?
 
-The free download is the trial: one complete analysis report. After that a one-time buyout allows unlimited scans on that machine. There are no ads and no subscription to cancel. The installer is about 2.4 MB (there is also a portable zip), and it runs on Windows 10 / 11, 64-bit, with the interface and the report in Chinese, English, Japanese, Korean, Spanish, French, German and Russian.
+The free download is the trial: one complete analysis report. After that a one-time buyout allows unlimited scans on that machine. There are no ads and no subscription to cancel. The installer is about 2.6 MiB (2,751,757 bytes in v1.0.38) (there is also a portable zip), and it runs on Windows 10 / 11, 64-bit, with the interface and the report in Chinese, English, Japanese, Korean, Spanish, French, German and Russian.
 
 ## What it will not tell you
 
